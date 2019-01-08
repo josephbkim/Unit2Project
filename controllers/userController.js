@@ -4,7 +4,7 @@ const userController = {
     index: (req, res) => {
         User.find({}).then(users => {
             console.log(users)
-            res.render({ users })
+            res.render('users/index', { users: users })
         })
     },
 
@@ -14,7 +14,7 @@ const userController = {
             name: req.body.name,
             department: req.body.department
         }).then(newUser => {
-            res.redirect('/')
+            res.redirect('/users')
         })
     },
 
@@ -24,14 +24,14 @@ const userController = {
             name: String,
             department: String
         }).then(newUser => {
-            res.redirect('/')
+            res.redirect('/users')
         })
     },
 
     show: (req, res) => {
         const newUserId = req.params.id
         User.findById(newUserId).then((newUser))
-        res.render('/show', { newUser })
+        res.send({ newUser })
     }
 
 }

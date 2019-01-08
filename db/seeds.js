@@ -2,11 +2,21 @@
 // const Tool = require('../models/Tool')
 const User = require('../models/User')
 
-l
-
-User.deleteMany({}).then(() => {
-    User.create(newUsers).then(users => {
-        console.log('Saved Users', users)
-        res.render(users)
+User.deleteMany({})
+    .then(() => {
+        return User.create({
+            name: "Bob the Builder",
+            department: "Residential",
+            tools: []
+        })
     })
-})
+// Tool.deleteMany({})
+//     .then(() => {
+//         return Tool.create({
+//             toolName: "Cutoff Saw",
+//             toolCo: "Stihl",
+//             toolModel: String,
+//             checkOut: String,
+//             checkIn: String,
+//         })
+//     })
