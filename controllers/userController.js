@@ -4,9 +4,10 @@ const userController = {
     index: (req, res) => {
         User.find({}).then(users => {
             console.log(users)
-            res.render('/', { users })
+            res.send({ users })
         })
     }
+
 }
 
 module.exports = userController
