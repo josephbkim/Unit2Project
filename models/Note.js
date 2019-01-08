@@ -9,9 +9,9 @@ const Note = [{
     noteTool: [{
         Type: Schema.Types.ObjectId,
         ref: 'Tool'
-    }]
-        noteContent: String
+    }],
+    noteContent: String
 }]
 
-module.exports = mongoose.model("Note, Note")
+module.exports = mongoose.model("Note", Note)
 

@@ -6,6 +6,8 @@ const User = new Schema({
     department: String,
     Tools: [{
         types: Schema.Types.ObjectId,
-        ref: 'Tools'
+        ref: 'Tool'
     }]
-})
+});
+
+module.exports = mongoose.model("User", User)
