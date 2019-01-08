@@ -7,4 +7,18 @@ const Tools = new Schema({
     toolModel: String,
     checkOut: String,
     checkIn: String
-})
+    notes: [{
+        noteUser: [{
+            Type: Schema.Types.ObjectId,
+            ref: 'User'
+        }],
+        noteTool: [{
+            Type: Schema.Types.ObjectId,
+            ref: 'Tool'
+        }]
+        noteContent: String
+    }]
+}]
+});
+
+module.exports = mongoose.model("Tools", Tool)
