@@ -3,8 +3,8 @@ const Schema = mongoose.Schema
 
 const User = new Schema({
     name: String,
-    // department: String,
-    // Tools: [{
+    department: String
+    // tools: [{
     //     types: Schema.Types.ObjectId,
     //     ref: 'Tool'
     // }]

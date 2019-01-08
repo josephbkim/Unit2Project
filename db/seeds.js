@@ -2,16 +2,7 @@
 // const Tool = require('../models/Tool')
 const User = require('../models/User')
 
-let newUsers = [{
-    name: 'Bob'
-},
-{
-    name: 'Tina'
-},
-{
-    name: 'George'
-}
-]
+l
 
 User.deleteMany({}).then(() => {
     User.create(newUsers).then(users => {
