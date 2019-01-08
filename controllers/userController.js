@@ -1,4 +1,4 @@
-User = require("../models/Users")
+User = require("../models/User")
 
 const userController = {
     index: (req, res) => {
