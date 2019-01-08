@@ -15,8 +15,8 @@ const userController = {
     create: (req, res) => {
         console.log(req.body)
         User.create({
-            name: String,
-            department: String
+            name: req.body.name,
+            department: req.body.department
         }).then(newUser => {
             res.redirect('/users')
         })
