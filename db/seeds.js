@@ -1,10 +1,21 @@
-const Note = require('../models/Note')
-const Tool = require('../models/Tool')
+// const Note = require('../models/Note')
+// const Tool = require('../models/Tool')
 const User = require('../models/User')
 
-User.deleteMany({})
-    .then(() => {
-        return User.create({
-            name: "Bob"
-        })
+let newUsers = [{
+    name: 'Bob'
+},
+{
+    name: 'Tina'
+},
+{
+    name: 'George'
+}
+]
+
+User.deleteMany({}).then(() => {
+    User.create(newUsers).then(users => {
+        console.log('Saved Users', users)
+        res.render(users)
     })
+})
