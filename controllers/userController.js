@@ -9,13 +9,7 @@ const userController = {
     },
 
     new: (req, res) => {
-        console.log(req.body)
-        User.create({
-            name: req.body.name,
-            department: req.body.department
-        }).then(newUser => {
-            res.redirect('/users')
-        })
+        res.render("users/new")
     },
 
     create: (req, res) => {
@@ -30,10 +24,12 @@ const userController = {
 
     show: (req, res) => {
         const newUserId = req.params.id
-        User.findById(newUserId).then((newUser))
-        res.send({ newUser })
-    }
+        User.findById(newUserId).then((newUser) => {
+            console.log(newUser)
+            res.render('user/show', { newUser })
+        })
 
+    }
 }
 
 module.exports = userController
