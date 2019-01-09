@@ -1,5 +1,10 @@
 body {
+    height: vh;
     width: vw;
+}
+
+.body {
+     background-image: url("https://i.imgur.com/kOJs2m6.jpg");
 }
 .nav-wrapper {
 
