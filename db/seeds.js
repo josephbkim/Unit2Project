@@ -1,5 +1,5 @@
 // const Note = require('../models/Note')
-// const Tool = require('../models/Tool')
+const Tool = require('../models/Tool')
 const User = require('../models/User')
 
 User.deleteMany({})
@@ -8,15 +8,34 @@ User.deleteMany({})
             name: "Bob the Builder",
             department: "Residential",
             tools: []
+        }).then((coolTool) => {
+            const newTool = Tool.create({
+                toolName: "Cutoff Saw",
+                toolCo: "Stihl",
+                toolModel: "TS420",
+                checkOut: "date.now",
+                checkIn: "date.now"
+            }).then((tool) => {
+                coolTool.tools.push(tool)
+            })
+
+            Promise.all([newTool])
+                .then(() => {
+                    coolTool.save()
+                })
         })
     })
-// Tool.deleteMany({})
-//     .then(() => {
-//         return Tool.create({
-//             toolName: "Cutoff Saw",
-//             toolCo: "Stihl",
-//             toolModel: String,
-//             checkOut: String,
-//             checkIn: String,
-//         })
-//     })
+
+
+    // .then(() => {
+    //     const newTool1 = Tool.create({
+    //         toolName: "Cutoff Saw",
+    //         toolCo: "Stihl",
+    //         toolModel: "TS420",
+    //         checkOut: "date.now",
+    //         checkIn: "date.now"
+    //     }).then(() => {
+
+    //     })
+    // })
+
