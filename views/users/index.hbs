@@ -10,8 +10,12 @@
                 <p>{{department}}</p>
             </div>
             <div class="card-action">
-                <a href="/{{newUser._id}}/edit">Update</a>
-                <a href="#">Eventually Delete Button</a>
+                <form>
+                    <a href="/users/edit"><button class="btn">Update</button></a>
+                </form>
+                <form action="/{{newUserId}}?_method=DELETE" method="POST">
+                    <button class="btn" type="submit">Delete</button>
+                </form>
             </div>
         </div>
     </div>
