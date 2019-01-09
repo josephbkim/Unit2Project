@@ -26,9 +26,19 @@ const userController = {
         const newUserId = req.params.id
         User.findById(newUserId).then((newUser) => {
             console.log(newUser)
-            res.render('user/show', { newUser })
+            res.render('users/index', { newUser })
         })
 
+    },
+
+    edit: (req, res) => {
+        const newUserId = req.params.id
+        res.render('users.edit', { newUserId })
+    },
+
+    update: (req, res) => {
+        const newUserId = req.params.id
+        console.log(req.body)
     }
 }
 

@@ -1,4 +1,6 @@
-<a href="/users/new">Create New User</a>
+<div>
+    <a href="/users/new" class="btn-large">Create New User</a>
+</div>
 {{#each users}}
 <div class="row">
     <div class="col s16 m6">
@@ -8,7 +10,7 @@
                 <p>{{department}}</p>
             </div>
             <div class="card-action">
-                <a href="#">Eventually Update Button</a>
+                <a href="/{{newUser._id}}/edit">Update</a>
                 <a href="#">Eventually Delete Button</a>
             </div>
         </div>

@@ -1,3 +1,7 @@
+body {
+    width: vw;
+}
 .nav-wrapper {
+
     background-color: green;
 }
