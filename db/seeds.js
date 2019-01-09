@@ -20,4 +20,12 @@ const newTool = Tool.create({
     checkIn: "date.now"
 })
 
+const newTool2 = Tool.create({
+    toolName: "Hammer Drill",
+    toolCo: "Bosch",
+    toolModel: "TModel#  HD18-2",
+    checkOut: "date.now",
+    checkIn: "date.now"
+})
+
 

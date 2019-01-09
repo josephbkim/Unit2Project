@@ -1,5 +1,5 @@
 <div>
-    <a href="/tools/new" class="btn-large">Add New Tool</a>
+    <a href="/coTools/new" class="btn-large">Add New Tool</a>
 </div>
 {{#each tools}}
 <div class="row">
@@ -12,14 +12,7 @@
                 <p>{{checkOut}}</p>
                 <p>{{checkIn}}</p>
             </div>
-            <div class="card-action">
-                <form>
-                    <a href="/tools/edit"><button class="btn">Update</button></a>
-                </form>
-                <form action="/{{newUserId}}?_method=DELETE" method="POST">
-                    <button class="btn" type="submit">Delete</button>
-                </form>
-            </div>
+
         </div>
     </div>
 </div>
