@@ -11,7 +11,7 @@ router.get('/users/:id/edit', userController.edit)
 router.patch('/users/:id', userController.update)
 router.delete('/users/:id', userController.delete)
 
-router.get('/tools', userController.index)
+router.get('/:id/tools', userController.index)
 
 module.exports = router
 
