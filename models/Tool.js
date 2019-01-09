@@ -6,11 +6,11 @@ const Tools = new Schema({
     toolCo: String,
     toolModel: String,
     checkOut: String,
-    checkIn: String,
-    notes: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Note'
-    }]
+    checkIn: String
+    // notes: [{
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Note'
+    // }]
 
 });
 
