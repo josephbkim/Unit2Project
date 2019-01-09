@@ -1,10 +1,13 @@
-Tool = require("../models/Tool")
+const User = require('../models/User')
+const Tool = require("../models/Tool")
 
 const toolController = {
     index: (req, res) => {
-        Tool.find({}).then(tools => {
-            console.log(tools)
-            res.render('/toolss/index', { tools })
+        const newTool = req.params.id
+        console.log(newToolId)
+        Tool.findById(newToolId).populate('tools').then((newTool) => {
+            const bananaTools = newTool.toolName
+            res.render('toolss/index', { bananaTools })
         })
     },
 
@@ -19,7 +22,7 @@ const toolController = {
             toolCo: req.body.toolCo,
             toolModel: req.body.toolModel,
             checkOut: req.body.checkOut,
-            checkIn: req.body.checkIn
+            note: req.body.note
         }).then(newTool => {
             res.redirect('/')
         })

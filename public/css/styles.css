@@ -3,6 +3,11 @@ body {
     width: vw;
 }
 
+li {
+    margin: auto 30px;
+    font-size: 20px;
+}
+
 .body {
      background-image: url("https://i.imgur.com/kOJs2m6.jpg");
 }
