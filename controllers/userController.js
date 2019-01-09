@@ -39,7 +39,22 @@ const userController = {
     update: (req, res) => {
         const newUserId = req.params.id
         console.log(req.body)
+        User.findByIdAndUpdate(newUserId, req.body, {
+            new: true
+        }).then((newUser) => {
+            res.redirect(`${newUserId}`)
+        })
+
+    },
+
+    delete: (req, res) => {
+        const newUserId = req.params.id
+        User.findByIdAndRemove(newUserId).then(() => {
+            res.redirect('/user')
+        })
     }
+
+
 }
 
 module.exports = userController
