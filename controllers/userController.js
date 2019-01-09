@@ -16,9 +16,10 @@ const userController = {
         console.log(req.body)
         User.create({
             name: req.body.name,
-            department: req.body.department
+            department: req.body.department,
+            tools: []
         }).then(newUser => {
-            res.redirect('/users')
+            res.redirect('/')
         })
     },
 
@@ -26,14 +27,14 @@ const userController = {
         const newUserId = req.params.id
         User.findById(newUserId).then((newUser) => {
             console.log(newUser)
-            res.render('users/index', { newUser })
+            res.render('/users/show', { newUser })
         })
 
     },
 
     edit: (req, res) => {
         const newUserId = req.params.id
-        res.render('users.edit', { newUserId })
+        res.render('/', { newUserId })
     },
 
     update: (req, res) => {
@@ -42,7 +43,7 @@ const userController = {
         User.findByIdAndUpdate(newUserId, req.body, {
             new: true
         }).then((newUser) => {
-            res.redirect(`${newUserId}`)
+            res.redirect(`/${newUserId}`)
         })
 
     },
@@ -50,7 +51,7 @@ const userController = {
     delete: (req, res) => {
         const newUserId = req.params.id
         User.findByIdAndRemove(newUserId).then(() => {
-            res.redirect('/user')
+            res.redirect('/')
         })
     }
 
