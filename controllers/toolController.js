@@ -20,6 +20,8 @@ const toolController = {
             toolModel: req.body.toolModel,
             checkOut: req.body.checkOut,
             checkIn: req.body.checkIn
+        }).then(newTool => {
+            res.redirect('/')
         })
     }
 }
