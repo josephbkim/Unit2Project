@@ -1,7 +1,7 @@
 const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
-const Tools = new Schema({
+const Tool = new Schema({
     toolName: String,
     toolCo: String,
     toolModel: String,
