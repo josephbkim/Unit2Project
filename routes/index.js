@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const userController = require('../controllers/userController')
-// const toolController = require('../controllers/userController')
+const toolController = require('../controllers/toolController')
 
 router.get('/', userController.index)
 router.post('/', userController.create)
@@ -11,10 +11,10 @@ router.get('/:id/edit', userController.edit)
 router.patch('/:id', userController.update)
 router.delete('/:id', userController.delete)
 
-// router.get('/coTools', toolController.index)
-// router.post('/coTools', toolController.create)
-// router.get('/coTools/new', toolController.new)
-// // router.get('coTools/:id', toolController)
+router.get('/tools', toolController.index)
+router.post('/tools', toolController.create)
+router.get('/tools/new', toolController.new)
+// // router.get('tools/:id', toolController)
 
 module.exports = router
 

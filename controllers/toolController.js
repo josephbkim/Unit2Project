@@ -4,12 +4,12 @@ const toolController = {
     index: (req, res) => {
         Tool.find({}).then(tools => {
             console.log(tools)
-            res.render('/coTools/index', { tools })
+            res.render('/toolss/index', { tools })
         })
     },
 
     new: (req, res) => {
-        res.render("tools/new")
+        res.render("toolss/new")
     },
 
     create: (req, res) => {

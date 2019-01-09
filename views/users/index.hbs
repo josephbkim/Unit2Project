@@ -11,12 +11,10 @@
                 <p>{{tools}}</p>
             </div>
             <div class="card-action">
-                <form>
-                    <a href="/edit"><button class="btn">Update</button></a>
-                </form>
-                <form action="/{{newUserId}}?_method=DELETE" method="POST">
-                    <button class="btn" type="submit">Delete</button>
-                </form>
+                {{!-- <form> --}}
+                    <a href={{_id}}><button class=" btn">Tool Check Out</button></a>
+
+                    {{!-- </form> --}}
             </div>
         </div>
     </div>
