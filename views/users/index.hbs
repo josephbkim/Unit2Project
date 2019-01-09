@@ -1,5 +1,5 @@
 <div>
-    <a href="/users/new" class="btn-large">Create New User</a>
+    <a href="/new" class="btn-large">Create New User</a>
 </div>
 {{#each users}}
 <div class="row">
@@ -8,10 +8,11 @@
             <div class="card-content white-text">
                 <span class="card-title">{{name}}</span>
                 <p>{{department}}</p>
+                <p>{{tools}}</p>
             </div>
             <div class="card-action">
                 <form>
-                    <a href="/users/edit"><button class="btn">Update</button></a>
+                    <a href="/edit"><button class="btn">Update</button></a>
                 </form>
                 <form action="/{{newUserId}}?_method=DELETE" method="POST">
                     <button class="btn" type="submit">Delete</button>
