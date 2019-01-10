@@ -6,7 +6,7 @@ const toolController = {
         const newToolId = req.params.id
         console.log(newToolId)
         Tool.findById(newToolId).populate('tools').then((newTool) => {
-            const bananaTools = newTool.toolName
+            const bananaTools = newTool.tools
             res.render('toolss/index', { bananaTools, newToolId })
         })
     },
