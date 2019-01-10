@@ -45,7 +45,7 @@ const toolController = {
         Tool.findByIdAndUpdate(newToolId, req.body, {
             new: true
         }).then((newTool) => {
-            res.redirect(`/$newToolId`)
+            res.redirect('/')
         })
     },
 
