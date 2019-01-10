@@ -9,7 +9,7 @@ const newNote1 = new Note({
 })
 
 const newNote2 = new Note({
-    CreatedAt: "Now",
+    CreatedAt: "Yesterday",
     noteContent: "Cool"
 
 })

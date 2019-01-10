@@ -24,6 +24,7 @@ const userController = {
                 department: req.body.department
             }).then(newUser => {
                 tool.employTag.push(newUser)
+                tool.save()
                 res.redirect('/')
             })
         })
