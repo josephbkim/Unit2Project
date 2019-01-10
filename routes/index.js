@@ -3,7 +3,7 @@ const router = express.Router()
 // const userController = require('../controllers/userController')
 const toolController = require('../controllers/toolController')
 
-// router.get('/', toolController.index)
+router.get('/', toolController.index)
 // router.post('/', toolController.create)
 // router.get('/new', toolController.new)
 // router.get('/:id', toolController.show)
@@ -12,10 +12,6 @@ const toolController = require('../controllers/toolController')
 // router.delete('/:id', toolController.delete)
 
 
-// router.get('/:id/tools', toolController.index)
-// router.post('/:id/tools', toolController.create)
-// router.get('/:id/tools/new', toolController.new)
-// // // router.get('tools/:id', toolController)
 
 module.exports = router
 
