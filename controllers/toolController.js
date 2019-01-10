@@ -3,11 +3,11 @@ const Tool = require("../models/Tool")
 
 const toolController = {
     index: (req, res) => {
-        const newTool = req.params.id
+        const newToolId = req.params.id
         console.log(newToolId)
         Tool.findById(newToolId).populate('tools').then((newTool) => {
             const bananaTools = newTool.toolName
-            res.render('toolss/index', { bananaTools })
+            res.render('toolss/index', { bananaTools, newToolId })
         })
     },
 

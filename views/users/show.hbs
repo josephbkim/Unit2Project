@@ -1,6 +1,12 @@
 <div>
-    <a href="/{{newUser._id}}/edit"><button class="btn">Checkout Tools</button></a>
+    <h2>Your Employee DashBoard</h2>
+</div>
+<div>
+    <a href="/{{newUser._id}}/edit"><button class="btn">Update Profile</button></a>
     <h1>{{newUser.name}}</h1>
+    <h4>Department</h4>
     <p>{{newUser.department}}</p>
+    <h4>Checked Out Tools</h4>
     <p>{{newUser.tools}}</p>
+    <a href="/{{newUser._id}}/tools"><button class="btn">Checkout Tools</button></a>
 </div>
