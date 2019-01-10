@@ -1,6 +1,7 @@
 <div>
     <a href="/new" class="btn-large">Create New Tool</a>
 </div>
+{{log invTools}}
 {{#each invTools}}
 <div class="row">
     <div class="col s16 m6">
@@ -10,8 +11,12 @@
                 <p>Brand: {{toolCo}}</p>
                 <p>Model: {{toolModel}}</p>
                 <p>Date Checked Out: {{checkOut}}</p>
-                <p>Employee: {{employTag}}</p>
-                <p>Note: {{note}}</p>
+
+                {{#each employTag}}
+                <p>Employee: {{name}}</p>
+                {{/each}}
+                <p>Note: {{notes}}</p>
+
             </div>
             <div class="card-action">
                 <a href="{{_id}}/users/new"> <button class=" btn">Check Out Tool</button></a>

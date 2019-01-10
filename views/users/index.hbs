@@ -6,4 +6,13 @@
                 <span class="card-title">{{name}}</span>
                 <p>{{department}}</p>
             </div>
-            <a href="{{toolUser}}/edit" </div> </div> </div> {{/each}}
+            <div>
+                <a href="{{toolUser}}/edit"><button class="btn">Update</button></a>
+                <form action="/{{toolUser}}?_method=DELETE" method="POST">
+                    <button class="btn" type="submit">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{{/each}}

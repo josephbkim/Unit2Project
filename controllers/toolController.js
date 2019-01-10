@@ -3,7 +3,7 @@ const Tool = require("../models/Tool")
 
 const toolController = {
     index: (req, res) => {
-        Tool.find({}).populate('this.employTag').then((invTools) => {
+        Tool.find({}).populate('employTag').then((invTools) => {
             console.log(invTools)
             res.render('toolss/index', { invTools })
         })
