@@ -27,7 +27,7 @@ const toolController = {
     },
 
     show: (req, res) => {
-        const newToolId = req.params.index
+        const newToolId = req.params.id
         Tool.findById(newToolId).then((newTool) => {
             console.log(newTool)
             res.render('toolss/show', { newTool })
@@ -35,12 +35,12 @@ const toolController = {
     },
 
     edit: (req, res) => {
-        const newToolId = req.params.index
+        const newToolId = req.params.id
         res.render('toolss/edit', { newToolId })
     },
 
     update: (req, res) => {
-        const newToolId = req.params.index
+        const newToolId = req.params.id
         console.log(req.body)
         Tool.findByIdAndUpdate(newToolId, req.body, {
             new: true
@@ -50,7 +50,7 @@ const toolController = {
     },
 
     delete: (req, res) => {
-        const newToolId = req.params.index
+        const newToolId = req.params.id
         Tool.findByIdAndRemove(newToolId).then(() => {
             res.redirect('/')
         })

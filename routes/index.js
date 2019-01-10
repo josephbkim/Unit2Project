@@ -9,7 +9,7 @@ router.get('/new', toolController.new)
 router.get('/:id/show', toolController.show)
 router.get('/:id/edit', toolController.edit)
 router.patch('/:id', toolController.update)
-router.delete('/:id/edit', toolController.delete)
+router.delete('/:id', toolController.delete)
 
 
 
