@@ -30,7 +30,7 @@ const newTool1 = new Tool({
     toolModel: "TS420",
     checkOut: "date.now",
     employTag: [employ1],
-    note: [newNote1]
+    notes: [newNote1]
 })
 
 const newTool2 = new Tool({
@@ -39,7 +39,7 @@ const newTool2 = new Tool({
     toolModel: "TModel#  HD18-2",
     checkOut: "date.now",
     employTag: [employ2],
-    note: [newNote2]
+    notes: [newNote2]
 })
 
 
