@@ -12,13 +12,13 @@ router.patch('/:id', toolController.update)
 router.delete('/:id', toolController.delete)
 
 
-router.get('/:id/users', userController.index)
+router.get('/users', userController.index)
 router.post('/:id/users', userController.create)
 router.get('/:id/users/new', userController.new)
 router.get('/:id/users/:id/show', userController.show)
-// router.get('/:id/users/:id/edit', userController.edit)
-// router.patch('/:id/users/:id', userController.update)
-// router.delete('/:id/users/:id', userController.delete)
+router.get('/:id/users/:id/edit', userController.edit)
+router.patch('/:id/users/:id', userController.update)
+router.delete('/:id/users/:id', userController.delete)
 
 
 
