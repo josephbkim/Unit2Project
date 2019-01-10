@@ -10,17 +10,20 @@ const userController = {
     },
 
     new: (req, res) => {
-        const newUserId = req.params.id
-        res.render('users/new', { newUserId })
+        console.log(req.params)
+        const toolId = req.params.id
+        res.render('users/new', { toolId })
     },
 
     create: (req, res) => {
-        const newUserId = req.params.id
-        Tool.findById(newUserId).then((newUser) => {
+        const newToolId = req.params.id
+        Tool.findById(newToolId).then((tool) => {
+            console.log(tool)
             User.create({
                 name: req.body.name,
                 department: req.body.department
             }).then(newUser => {
+                tool.employTag.push(newUser)
                 res.redirect('/')
             })
         })
