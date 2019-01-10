@@ -1,4 +1,4 @@
-// const Tool = require('../models/Tool')
+const Tool = require('../models/Tool')
 const Note = require('../models/Note')
 
 const noteController = {
