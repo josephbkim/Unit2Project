@@ -30,7 +30,7 @@ const toolController = {
         const newToolId = req.params.index
         Tool.findById(newToolId).then((newTool) => {
             console.log(newTool)
-            res.render('toolss/show')
+            res.render('toolss/show', { newTool })
         })
     },
 

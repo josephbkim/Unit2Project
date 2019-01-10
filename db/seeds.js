@@ -43,7 +43,7 @@ const newTool2 = new Tool({
 })
 
 
-User.remove({})
+Tool.remove({})
     .then(() => Note.remove({}))
     .then(() => User.remove({}))
     .then(() => User.insertMany([employ1, employ2]))
