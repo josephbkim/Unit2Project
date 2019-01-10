@@ -14,6 +14,16 @@ const newNote2 = new Note({
 
 })
 
+const employ1 = new User({
+    name: "Bob the Builder",
+    department: "Residential",
+})
+
+const employ2 = new User({
+    name: "Paul Bunyun",
+    department: "Lumber",
+})
+
 const newTool1 = new Tool({
     toolName: "Cutoff Saw",
     toolCo: "Stihl",
@@ -32,15 +42,6 @@ const newTool2 = new Tool({
     note: [newNote2]
 })
 
-const employ1 = new User({
-    name: "Bob the Builder",
-    department: "Residential",
-})
-
-const employ2 = new User({
-    name: "Paul Bunyun",
-    department: "Lumber",
-})
 
 User.remove({})
     .then(() => Note.remove({}))
