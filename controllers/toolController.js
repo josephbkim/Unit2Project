@@ -3,7 +3,7 @@ const Tool = require("../models/Tool")
 
 const toolController = {
     index: (req, res) => {
-        Tool.find({}).then(invTools => {
+        Tool.find({}).then((invTools) => {
             console.log(invTools)
             res.render('toolss/index', { invTools })
         })
