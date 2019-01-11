@@ -9,6 +9,11 @@ const noteController = {
         })
     },
 
+    new: (req, res) => {
+        const toolNote = req.params.id
+        res.render('notes/new')
+    },
+
     create: (req, res) => {
         const toolNote = req.params.id
         Note.findById(toolNote).then((note) => {
@@ -16,22 +21,26 @@ const noteController = {
                 createdAt: req.body.createdAt,
                 noteContent: req.body.noteContent
             }).then(newNote => {
-                note.push(newNote)
-                note.save()
+                tool.noteContent.push(newNote)
+                console.log(newNote)
+                Note.save()
                 res.redirect('/')
             })
         })
     },
 
-    new: (req, res) => {
-        const toolNote = req.params.id
-        res.render('notes/new')
+    show: (req, res) => {
+        Note.find().then((newNote) => {
+            console.log(newNote)
+            res.render('notes/show', { newNote })
+        })
+
     },
 
     delete: (req, res) => {
         const toolNote = req.params.id
         Note.findByIdAndRemove(toolNote).then(() => {
-            res.redirect('/notes')
+            res.redirect('/')
         })
     }
 }

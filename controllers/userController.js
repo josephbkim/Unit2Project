@@ -4,6 +4,7 @@ const User = require("../models/User")
 
 const userController = {
     index: (req, res) => {
+        const toolId = req.params.id
         User.find().then((toolUser) => {
             res.render('users/index', { toolUser })
         })
@@ -31,8 +32,7 @@ const userController = {
     },
 
     show: (req, res) => {
-        const newUserId = req.params.id
-        User.findById(newUserId).then((newUser) => {
+        User.find().then((newUser) => {
             console.log(newUser)
             res.render('users/show', { newUser })
         })

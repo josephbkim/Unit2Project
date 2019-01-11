@@ -14,6 +14,7 @@ keeps a log of all those who have checked those items out.
 * Dependencies - dotenv, express, handlebars, method-override, mongoose, nodemon.  
 * Design - [Materialize](https://materializecss.com/buttons.html) 
 * [Mehn-lab](https://git.generalassemb.ly/crmgunter/mehn-lab)
+* [Date/Date.now](https://stackoverflow.com/questions/35501273/what-is-the-difference-between-date-now-and-date-now-in-mongoose)
 
 ## Technical Specifications  
 

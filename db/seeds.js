@@ -28,18 +28,19 @@ const newTool1 = new Tool({
     toolName: "Cutoff Saw",
     toolCo: "Stihl",
     toolModel: "TS420",
-    checkOut: "date.now",
-    employTag: [employ1],
-    notes: [newNote1]
+    checkOut: Date.now,
+    notes: [newNote1],
+    employTag: [employ1]
 })
 
 const newTool2 = new Tool({
     toolName: "Hammer Drill",
     toolCo: "Bosch",
     toolModel: "TModel#  HD18-2",
-    checkOut: "date.now",
-    employTag: [employ2],
-    notes: [newNote2]
+    checkOut: Date.now,
+    notes: [newNote2],
+    employTag: [employ2]
+
 })
 
 
