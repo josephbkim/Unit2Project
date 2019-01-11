@@ -18,6 +18,7 @@ const toolController = {
         console.log(req.body)
         Tool.create({
             toolName: req.body.toolName,
+            toolCo: req.body.toolCo,
             toolModel: req.body.toolModel,
             checkOut: req.body.checkOut,
             employTag: req.body.employTag,
