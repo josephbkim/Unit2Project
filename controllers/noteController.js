@@ -7,6 +7,13 @@ const noteController = {
             console.log(toolNote)
             res.render('notes/index', { toolNote })
         })
+    },
+
+    delete: (req, res) => {
+        const toolNote = req.params.id
+        Note.findByIdAndRemove(toolNote).then(() => {
+            res.redirect('/notes')
+        })
     }
 }
 
