@@ -12,7 +12,6 @@ const userController = {
     },
 
     new: (req, res) => {
-        console.log(req.params)
         const toolId = req.params.id
         res.render('users/new', { toolId })
     },
@@ -20,7 +19,6 @@ const userController = {
     create: (req, res) => {
         const newToolId = req.params.id
         Tool.findById(newToolId).then((tool) => {
-            console.log(tool)
             User.create({
                 name: req.body.name,
                 department: req.body.department
@@ -34,7 +32,6 @@ const userController = {
 
     show: (req, res) => {
         User.find().then((newUser) => {
-            console.log(newUser)
             res.render('users/show', { newUser })
         })
 
@@ -47,7 +44,6 @@ const userController = {
 
     update: (req, res) => {
         const newUserId = req.params.id
-        console.log(req.body)
         Tool.findByIdAndUpdate(newUserId, req.body, {
             new: true
         }).then((newUser) => {
@@ -58,7 +54,9 @@ const userController = {
 
     delete: (req, res) => {
         const newUserId = req.params.id
-        Tool.findByIdAndDelete(newUserId).then(() => {
+        Tool.findByIdAndDelete(newUserId).then((tool) => {
+            tool.employTag.pop(newUserId)
+            tool.save()
             res.redirect('/')
         })
     }

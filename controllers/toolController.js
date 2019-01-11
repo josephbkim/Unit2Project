@@ -4,9 +4,7 @@ const Tool = require("../models/Tool")
 const toolController = {
     index: (req, res) => {
         Tool.find({}).populate('employTag').populate('notes').then((invTools) => {
-            console.log(invTools)
             res.render('toolss/index', { invTools })
-            console.log(invTools)
         })
     },
 
@@ -15,7 +13,6 @@ const toolController = {
     },
 
     create: (req, res) => {
-        console.log(req.body)
         Tool.create({
             toolName: req.body.toolName,
             toolCo: req.body.toolCo,
@@ -31,7 +28,6 @@ const toolController = {
     show: (req, res) => {
         const newToolId = req.params.id
         Tool.findById(newToolId).then((newTool) => {
-            console.log(newTool)
             res.render('toolss/show', { newTool })
         })
     },
@@ -43,7 +39,6 @@ const toolController = {
 
     update: (req, res) => {
         const newToolId = req.params.id
-        console.log(req.body)
         Tool.findByIdAndUpdate(newToolId, req.body, {
             new: true
         }).then((newTool) => {

@@ -17,7 +17,6 @@ const noteController = {
     create: (req, res) => {
         const newNoteId = req.params.id
         Tool.findById(newNoteId).then((note) => {
-            console.log(note)
             Note.create({
                 createdAt: req.body.createdAt,
                 noteContent: req.body.department
@@ -45,7 +44,6 @@ const noteController = {
 
     show: (req, res) => {
         Note.find().then((newNote) => {
-            console.log(newNote)
             res.render('notes/show', { newNote })
         })
 

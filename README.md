@@ -8,7 +8,9 @@ keeps a log of all those who have checked those items out.
 ## Project Links  
 * [Heroku](https://dry-chamber-10650.herokuapp.com/)  
 * [Trello Board](https://trello.com/b/Xv6Mqy5z/unit-2-project)  
-* [GitHub Repository](https://github.com/josephbkim/joebkim.github.io)  
+* [GitHub Repository](https://github.com/josephbkim/joebkim.github.io) 
+* [Initial Wireframe](https://i.imgur.com/pU4WWBp.png) 
+*  [ERD](https://i.imgur.com/kZCDPUo.png)
 
 ## Technologies and References Used  
 * Dependencies - dotenv, express, handlebars, method-override, mongoose, nodemon.  
