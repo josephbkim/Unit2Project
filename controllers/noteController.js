@@ -3,9 +3,9 @@ const Note = require('../models/Note')
 
 const noteController = {
     index: (req, res) => {
-        Note.find().then((toolNote) => {
-            console.log(toolNote)
-            res.render('notes/index', { toolNote })
+        const allNotes = req.params.id
+        Note.findById(allNotes).then((notes) => {
+            res.render('notes/index', { notes })
         })
     },
 
@@ -15,16 +15,12 @@ const noteController = {
     },
 
     create: (req, res) => {
-        const toolNote = req.params.id
-        Note.findById(toolNote).then((note) => {
-            Note.create({
-                createdAt: req.body.createdAt,
-                noteContent: req.body.noteContent
-            }).then(newNote => {
-                tool.noteContent.push(newNote)
-                console.log(newNote)
-                Note.save()
-                res.redirect('/')
+        Note.create({
+            createdAt: req.body.createdAt,
+            noteContent: req.body.noteContent
+        }).then(newNotes => {
+            Tool.findById(req.params.id).then(toolId => {
+                toolId.Note.push(newNotes)
             })
         })
     },

@@ -19,7 +19,11 @@ li {
     background-color: green;
 }
 
-.card-action.btn {
+/* .card-action.btn {
     display: inline;
     margin: 20 px;
+} */
+
+div.notes-buttons {
+    display: inline-block;
 }

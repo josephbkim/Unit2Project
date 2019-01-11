@@ -5,8 +5,11 @@ const User = require("../models/User")
 const userController = {
     index: (req, res) => {
         const toolId = req.params.id
-        User.find().then((toolUser) => {
-            res.render('users/index', { toolUser })
+        // find this tool÷, finds its users?
+        // .populate('employTag')
+        Tool.findById(toolId).populate('employTag').then((toolUser) => {
+            const showToolUsers = toolUser.employTag
+            res.render('users/index', { showToolUsers, toolUser })
         })
     },
 

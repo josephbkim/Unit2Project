@@ -1,4 +1,6 @@
-{{#each toolUser}}
+{{showToolUsers}}
+
+{{#each showToolUsers}}
 <div class="row">
     <div class="col s16 m6">
         <div class="card blue-grey darken-1">
@@ -7,8 +9,8 @@
                 <p>{{department}}</p>
             </div>
             <div>
-                <a href="{{toolUser}}/edit"><button class="btn">Update</button></a>
-                <form action="/{{../toolUser}}?_method=DELETE" method="POST">
+                <a href="{{../_id}}/edit"><button class="btn">Update</button></a>
+                <form action="/{{_id}}?_method=DELETE" method="POST">
                     <button class="btn" type="submit">Delete</button>
                 </form>
             </div>
