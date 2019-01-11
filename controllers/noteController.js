@@ -4,10 +4,12 @@ const Note = require('../models/Note')
 const noteController = {
     index: (req, res) => {
         const allNotes = req.params.id
-        Note.findById(allNotes).then((notes) => {
-            res.render('notes/index', { notes })
+        Tool.findById(allNotes).populate('notes').then((toolNotes) => {
+            const showNotes = toolNotes.notes
+            res.render('notes/index', { showNotes, toolNotes })
         })
     },
+
 
     new: (req, res) => {
         const toolNote = req.params.id
