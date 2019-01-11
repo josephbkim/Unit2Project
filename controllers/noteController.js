@@ -15,12 +15,30 @@ const noteController = {
     },
 
     create: (req, res) => {
-        Note.create({
-            createdAt: req.body.createdAt,
-            noteContent: req.body.noteContent
-        }).then(newNotes => {
-            Tool.findById(req.params.id).then(toolId => {
-                toolId.Note.push(newNotes)
+        const newNoteId = req.params.id
+        Tool.findById(newNoteId).then((note) => {
+            console.log(note)
+            Note.create({
+                createdAt: req.body.createdAt,
+                noteContent: req.body.department
+            }).then(newNote => {
+                note.notes.push(newNote)
+                note.save()
+                res.redirect('/')
+            })
+        })
+
+    },
+    create: (req, res) => {
+        const newToolId = req.params.id
+        Tool.findById(newToolId).then((tool) => {
+            User.create({
+                name: req.body.name,
+                department: req.body.department
+            }).then(newUser => {
+                tool.employTag.push(newUser)
+                tool.save()
+                res.redirect('/')
             })
         })
     },

@@ -5,8 +5,6 @@ const User = require("../models/User")
 const userController = {
     index: (req, res) => {
         const toolId = req.params.id
-        // find this tool÷, finds its users?
-        // .populate('employTag')
         Tool.findById(toolId).populate('employTag').then((toolUser) => {
             const showToolUsers = toolUser.employTag
             res.render('users/index', { showToolUsers, toolUser })
@@ -50,7 +48,7 @@ const userController = {
     update: (req, res) => {
         const newUserId = req.params.id
         console.log(req.body)
-        User.findByIdAndUpdate(newUserId, req.body, {
+        Tool.findByIdAndUpdate(newUserId, req.body, {
             new: true
         }).then((newUser) => {
             res.redirect(`/${newUserId}`)
@@ -60,7 +58,7 @@ const userController = {
 
     delete: (req, res) => {
         const newUserId = req.params.id
-        User.findByIdAndRemove(newUserId).then(() => {
+        Tool.findByIdAndDelete(newUserId).then(() => {
             res.redirect('/')
         })
     }

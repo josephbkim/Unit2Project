@@ -1,9 +1,10 @@
 body {
     height: vh;
     width: vw;
-    /* background-image: url(https://i.imgur.com/paq7hGy.jpg); */
-    background-size: 100% 100%;
+    background-image: url(https://i.imgur.com/paq7hGy.jpg);
+    background-size: 100%;
 }
+
 
 li {
     margin: auto 50px;
@@ -19,11 +20,12 @@ li {
     background-color: green;
 }
 
-/* .card-action.btn {
+.card-action.btn {
     display: inline;
     margin: 20 px;
-} */
+}
 
 div.notes-buttons {
-    display: inline-block;
+    display: flexbox;
+    flex-direction: column;
 }
