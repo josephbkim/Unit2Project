@@ -1,4 +1,3 @@
-// const User = require('../models/User')
 const Tool = require("../models/Tool")
 
 const toolController = {
@@ -17,7 +16,6 @@ const toolController = {
             toolName: req.body.toolName,
             toolCo: req.body.toolCo,
             toolModel: req.body.toolModel,
-            checkOut: req.body.checkOut,
             employTag: req.body.employTag,
             notes: req.body.notes
         }).then(newTools => {

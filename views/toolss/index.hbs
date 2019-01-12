@@ -10,11 +10,15 @@
                 <span class="card-title">{{toolName}}</span>
                 <p>Brand: {{toolCo}}</p>
                 <p>Model: {{toolModel}}</p>
+
                 {{#each employTag}}
+                <p>Checked Out At: {{createdAt}}</p>
                 <p>Employee: {{name}}</p>
                 {{/each}}
-                <p>Note: {{notes}}</p>
-
+                {{#each notes}}
+                <p>Created At: {{createdAt}}</p>
+                <p>Note: {{noteContent}}</p>
+                {{/each}}
             </div>
             <div>
                 <div class="card-action">

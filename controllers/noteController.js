@@ -28,20 +28,6 @@ const noteController = {
                 res.redirect('/')
             })
         })
-
-    },
-    create: (req, res) => {
-        const newToolId = req.params.id
-        Tool.findById(newToolId).then((tool) => {
-            User.create({
-                name: req.body.name,
-                department: req.body.department
-            }).then(newUser => {
-                tool.employTag.push(newUser)
-                tool.save()
-                res.redirect('/')
-            })
-        })
     },
 
     show: (req, res) => {
