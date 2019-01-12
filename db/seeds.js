@@ -4,24 +4,24 @@ const User = require('../models/User')
 
 
 const newNote1 = new Note({
-    createdAt: Date,
+    createdAt: Date.now(),
     noteContent: "Broken"
 })
 
 const newNote2 = new Note({
-    createdAt: Date,
+    createdAt: Date.now(),
     noteContent: "Cool"
 
 })
 
 const employ1 = new User({
-    createdAt: Date,
+    createdAt: Date.now(),
     name: "Bob the Builder",
     department: "Residential"
 })
 
 const employ2 = new User({
-    createdAt: Date,
+    createdAt: Date.now(),
     name: "Paul Bunyun",
     department: "Lumber"
 })
