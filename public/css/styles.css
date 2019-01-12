@@ -29,3 +29,8 @@ div.notes-buttons {
     display: flexbox;
     flex-direction: column;
 }
+.actionBar {
+    display: flexbox;
+    justify-content: start;
+    height: 50px;
+}
