@@ -4,31 +4,32 @@ const User = require('../models/User')
 
 
 const newNote1 = new Note({
-    createdAt: String,
+    createdAt: Date,
     noteContent: "Broken"
 })
 
 const newNote2 = new Note({
-    CreatedAt: String,
+    createdAt: Date,
     noteContent: "Cool"
 
 })
 
 const employ1 = new User({
+    createdAt: Date,
     name: "Bob the Builder",
-    department: "Residential",
+    department: "Residential"
 })
 
 const employ2 = new User({
+    createdAt: Date,
     name: "Paul Bunyun",
-    department: "Lumber",
+    department: "Lumber"
 })
 
 const newTool1 = new Tool({
     toolName: "Cutoff Saw",
     toolCo: "Stihl",
     toolModel: "TS420",
-    checkOut: String,
     employTag: [employ1],
     notes: [newNote1]
 
@@ -38,7 +39,6 @@ const newTool2 = new Tool({
     toolName: "Hammer Drill",
     toolCo: "Bosch",
     toolModel: "TModel#  HD18-2",
-    checkOut: String,
     employTag: [employ2],
     notes: [newNote2]
 })

@@ -5,7 +5,6 @@ const Tool = new Schema({
     toolName: String,
     toolCo: String,
     toolModel: String,
-    checkOut: String,
     employTag: [{
         type: Schema.Types.ObjectId,
         ref: 'User'
