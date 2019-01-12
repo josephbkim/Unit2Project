@@ -7,7 +7,6 @@ const noteController = require('../controllers/noteController')
 router.get('/', toolController.index)
 router.post('/', toolController.create)
 router.get('/new', toolController.new)
-
 router.get('/:id/show', toolController.show)
 router.get('/:id/edit', toolController.edit)
 router.patch('/:id', toolController.update)
