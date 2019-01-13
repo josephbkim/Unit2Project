@@ -13,21 +13,24 @@ const noteController = {
 
     new: (req, res) => {
         const toolNote = req.params.id
-        res.render('notes/new')
+        res.render('notes/new', { toolNote })
     },
 
     create: (req, res) => {
-        const newNoteId = req.params.id
-        Tool.findById(newNoteId).then((note) => {
-            Note.create({
-                createdAt: req.body.createdAt,
-                noteContent: req.body.department
-            }).then(newNote => {
-                note.notes.push(newNote)
-                note.save()
-                res.redirect('/')
+        const toolId = req.params.id
+        const newNoteId = req.params.userId
+        Tool.findById(toolId)
+            .then((tool) => {
+                Note.create({
+                    createdAt: req.body.createdAt,
+                    noteContent: req.body.noteContent
+                }).then(newNote => {
+                    console.log(newNote)
+                    tool.notes.push(newNote)
+                    tool.save()
+                    res.redirect('/')
+                })
             })
-        })
     },
 
     show: (req, res) => {

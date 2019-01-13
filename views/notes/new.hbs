@@ -1,8 +1,16 @@
-<div>
-    <h1>New Note</h1>
-    <form action="/{{toolNote}}" method="POST">
-        <input type="date" name="createdAt" placeholder="Time Created" value="date.now()">
-        <input type="text" name="noteContent" placeholder="Note" value="">
-        <button type="submit">Check Out</button>
-    </form>
+<div class="container">
+    <div class="row">
+        <div class="col s8 offset-s2">
+            <div class="card green lighten-1">
+                <div class="card-content white-text">
+                    <form action="/{{toolNote}}/notes" method="POST">
+                        <h1>New Note</h1>
+                        <input type="date" name="createdAt" placeholder="Time Created" value="date.now()">
+                        <input type="text" name="noteContent" placeholder="Note" value="">
+                        <button class="btn" type="submit">Post Note</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -22,7 +22,7 @@ router.patch('/:id/users/:userId', userController.update)
 router.delete('/:id/users/:userId', userController.delete)
 
 router.get('/:id/notes', noteController.index)
-router.get('/:id/notes', noteController.create)
+router.post('/:id/notes', noteController.create)
 router.get('/:id/notes/new', noteController.new)
 router.delete('/:id/notes/:notesId', noteController.delete)
 
