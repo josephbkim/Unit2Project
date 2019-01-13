@@ -60,7 +60,7 @@ const userController = {
     delete: (req, res) => {
         const toolId = req.params.id
         const newUserId = req.params.userId
-        User.findByIdAndRemove(newUserId)
+        User.findByIdAndRemove(this.newUserId)
             .then((tool) => {
                 res.redirect('/')
             })

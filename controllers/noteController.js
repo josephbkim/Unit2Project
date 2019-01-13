@@ -39,7 +39,7 @@ const noteController = {
 
     delete: (req, res) => {
         const noteid = req.params.id
-        Tool.findByIdAndRemove(toolNote).then(() => {
+        Note.findByIdAndRemove(this.toolNote).then(() => {
             res.redirect('/')
         })
     }
