@@ -10,8 +10,9 @@
                     <p>{{department}}</p>
                 </div>
                 <div class="actionBar">
-                    <a href="{{../_id}}/edit"><button class="btn" class="btn">Update</button></a>
-                    <form action="../{{_id}}?_method=DELETE" method="POST">
+                    <a href="/{{../showToolUsers._id}}/users/{{userFindId._id}}/edit">
+                        <button class="btn">Update</button></a>
+                    <form action="/{{../_id}}?_method=DELETE" method="POST">
                         <button class="btn" type="submit">Delete</button>
                     </form>
                 </div>
