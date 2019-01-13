@@ -24,7 +24,7 @@ router.delete('/:id/users/:userId', userController.delete)
 router.get('/:id/notes', noteController.index)
 router.get('/:id/notes', noteController.create)
 router.get('/:id/notes/new', noteController.new)
-router.delete('/notes/:id', noteController.delete)
+router.delete('/:id/notes/:notesId', noteController.delete)
 
 module.exports = router
 

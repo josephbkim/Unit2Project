@@ -3,11 +3,14 @@ body {
     /* background-image: url(https://i.imgur.com/paq7hGy.jpg); */
     background-image: url(https://i.imgur.com/zdxKla9.png?1);
     background-size: 100%;
+    background-attachment: fixed;
+    font-family: 'Cardo', serif;
+    font-size: 20px;
 }
 
 li {
     margin: auto 50px;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .body {
@@ -15,8 +18,13 @@ li {
      z-index: -1;
 }
 .nav-wrapper {
-
+    font-family: 'Cardo', serif;
     background-color: green;
+}
+
+.card-title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
 }
 
 .card-action {

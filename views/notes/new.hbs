@@ -1,7 +1,7 @@
 <div>
     <h1>New Note</h1>
-    <form action="/{{newNote}}" method="POST">
-        <input type="text" name="createdAt" placeholder="Time Created" value="">
+    <form action="/{{toolNote}}" method="POST">
+        <input type="date" name="createdAt" placeholder="Time Created" value="date.now()">
         <input type="text" name="noteContent" placeholder="Note" value="">
         <button type="submit">Check Out</button>
     </form>

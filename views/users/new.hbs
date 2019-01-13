@@ -1,9 +1,17 @@
-<div>
-    <h1>Checkout Tool</h1>
-    <form action="/{{toolId}}/users" method="POST">
-        <input type="text" name="name" placeholder="Name" value="">
-        <input type="text" name="department" placeholder="Department" value="">
-        {{!-- <input type="text" name="tool" placeholder="Tool" value=""> --}}
-        <button type="submit">Check Out</button>
-    </form>
+<div class="container">
+    <div class="row">
+        <div class="col s8 offset-s2">
+            <div class="card green lighten-1">
+                <div class="card-content white-text">
+                    <form action="/{{toolId}}/users" method="POST">
+                        <h3>Checkout Tool</h3>
+                        <input type="text" name="name" placeholder="Name" value="">
+                        <input type="text" name="department" placeholder="Department" value="">
+                        <input type="date" name="createdAt" placeholder="Checked Out Date" value="Date.now()">
+                        <button class="btn" type="submit">Check Out</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
