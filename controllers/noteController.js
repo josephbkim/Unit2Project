@@ -3,10 +3,11 @@ const Note = require('../models/Note')
 
 const noteController = {
     index: (req, res) => {
-        const allNotes = req.params.id
-        Tool.findById(allNotes).populate('notes').then((toolNotes) => {
+        const toolId = req.params.id
+        Tool.findById(toolId).populate('notes').then((toolNotes) => {
             const showNotes = toolNotes.notes
-            res.render('notes/index', { showNotes, toolNotes })
+
+            res.render('notes/index', { showNotes, toolNotes, toolId })
         })
     },
 
@@ -41,8 +42,8 @@ const noteController = {
     },
 
     delete: (req, res) => {
-        const noteid = req.params.id
-        Note.findByIdAndRemove(this.toolNote).then(() => {
+        const noteid = req.params.notesId
+        Note.findByIdAndRemove(noteid).then(() => {
             res.redirect('/')
         })
     }

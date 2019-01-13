@@ -1,20 +1,19 @@
-<h1>All Notes</h1>
-
 {{#each showNotes}}
-<div class="row">
-    <div class="col s16 m6">
-        <div class="card green lighten-1">
-            <div class="card-content white-text">
-                <span class="card-title">Notes</span>
-                <p>{{createdAt}}</p>
-                <p>{{noteContent}}</p>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col s8 offset-s2">
+            <div class="card green lighten-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Notes</span>
+                    <p>{{createdAt}}</p>
+                    <p>{{noteContent}}</p>
+                </div>
+                <form action="/{{toolId._id}}/notes/{{showNotes._id}}?_method=DELETE" method="POST">
+                    <button class="btn" type="submit">Delete</button>
+                </form>
 
+            </div>
         </div>
     </div>
 </div>
-<form action="/{{_id}}?_method=DELETE" method="POST">
-    <button class="btn" type="submit">Delete</button>
-</form>
-
 {{/each}}
