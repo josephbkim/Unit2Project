@@ -2,12 +2,12 @@
     {{#each showToolUsers}}
     <div class="row">
         <div class="col s8 offset-s2">
-            <div class="card green lighten-1">
+            <div class="card green">
                 <div class="card-content white-text">
-                    <h3>Tool Checkout Log</h3>
-                    <span class="card-title">{{name}}</span>
-                    <p>{{createdAt}}</p>
-                    <p>{{department}}</p>
+                    <span class="card-title">Tool Checkout Log</span>
+                    <p><b>Employee:</b> {{name}}</p>
+                    <p><b>Checkout Date:</b> {{createdAt}}</p>
+                    <p><b>Department:</b> {{department}}</p>
                 </div>
                 <div class="actionBar">
                     <a href="/{{../toolId}}/users/{{_id}}/edit">
