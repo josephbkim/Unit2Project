@@ -10,7 +10,7 @@ const userController = {
         Tool.findById(toolId).populate('employTag')
             .then((toolUser) => {
                 const showToolUsers = toolUser.employTag
-                res.render('users/index', { showToolUsers, toolUser })
+                res.render('users/index', { showToolUsers, toolUser, toolId, userId })
             })
     },
 
@@ -35,8 +35,10 @@ const userController = {
     },
 
     show: (req, res) => {
-        User.find().then((newUser) => {
-            res.render(':users/show', { newUser })
+        const toolId = req.params.id
+        const userId = req.params.userId
+        User.find().then((userId) => {
+            res.render(':users/show', { userId: userId, toolId: tooldId })
         })
 
     },
