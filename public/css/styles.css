@@ -48,6 +48,10 @@ div.notes-buttons {
     margin: 20px 10px;
 }
 
+.toolBtn {
+    margin: 5px 0;
+}
+
 
 #toolTracker {
     margin: auto 50px;
