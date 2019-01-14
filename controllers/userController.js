@@ -45,14 +45,14 @@ const userController = {
 
     edit: (req, res) => {
         const toolId = req.params.id
-        const newUserId = req.params.userId
-        res.render('users/edit', { toolId, newUserId })
+        const userId = req.params.userId
+        res.render('users/edit', { toolId, userId })
     },
 
     update: (req, res) => {
         const toolId = req.params.id
-        const newUserId = req.params.userId
-        User.findByIdAndUpdate(newUserId, req.body, {
+        const userId = req.params.userId
+        User.findByIdAndUpdate(toolId, userId, req.body, {
             new: true
         }).then((newUser) => {
             res.redirect(`/${newUserId}`)
@@ -62,8 +62,8 @@ const userController = {
 
     delete: (req, res) => {
         const toolId = req.params.id
-        const newUserId = req.params.userId
-        User.findByIdAndRemove(newUserId)
+        const userId = req.params.userId
+        User.findByIdAndRemove(userId)
             .then((tool) => {
                 res.redirect('/')
             })
