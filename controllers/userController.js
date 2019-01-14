@@ -9,7 +9,6 @@ const userController = {
         Tool.findById(toolId).populate('employTag')
             .then((toolUser) => {
                 const showToolUsers = toolUser.employTag
-                console.log(toolId)
                 res.render('users/index', { showToolUsers: showToolUsers, toolId })
             })
     },
@@ -35,8 +34,6 @@ const userController = {
     },
 
     show: (req, res) => {
-        const toolId = req.params.id
-        const userId = req.params.userId
         User.find().then((userId) => {
             res.render(':users/show', { userId: userId, toolId: tooldId })
         })
@@ -50,7 +47,6 @@ const userController = {
     },
 
     update: (req, res) => {
-        const toolId = req.params.id
         const userId = req.params.userId
         User.findByIdAndUpdate(userId, req.body, {
             new: true
@@ -61,7 +57,6 @@ const userController = {
     },
 
     delete: (req, res) => {
-        const toolId = req.params.id
         const userId = req.params.userId
         User.findByIdAndRemove(userId)
             .then((tool) => {

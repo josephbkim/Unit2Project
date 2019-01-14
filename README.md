@@ -17,6 +17,7 @@ keeps a log of all those who have checked those items out.
 * Design - [Materialize](https://materializecss.com/buttons.html) 
 * [Mehn-lab](https://git.generalassemb.ly/crmgunter/mehn-lab)
 * [Date/Date.now](https://stackoverflow.com/questions/35501273/what-is-the-difference-between-date-now-and-date-now-in-mongoose)
+* [Materialize font-size change](https://stackoverflow.com/questions/43810198/card-title-text-size-materialize)  
 
 ## Technical Specifications  
 
@@ -35,3 +36,9 @@ This application has:
   * DRY (Don't Repeat Yourself) code.
 * Be deployed on Heroku
 
+
+## Stretch Goals
+
+* Check in and Check out.
+* Inventory.
+* Keep track of amount of time checked out.

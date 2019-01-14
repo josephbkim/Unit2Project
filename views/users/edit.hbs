@@ -4,15 +4,17 @@
             <div class="card green lighten-1">
                 <div class="card-content white-text">
                     <span class="card-title">Employee Log Update</span>
-                    <form action="/{{toolId}}/users/{{userId}}?_method=PATCH" method="POST">
-                        <input type="text" name="name" placeholder="Name" value="">
-                        <input type="text" name="department" placeholder="Department" value="">
-                        <input type="date" name="createdAt" placeholder="Check Out Date" value="Date.now()">
-                        <button class="btn" type="submit">Update</button>
-                    </form>
-                    <form action="/{{toolId}}/users/{{userId}}?_method=DELETE" method="POST">
-                        <button class="btn" type="submit">Delete</button>
-                    </form>
+                    <div>
+                        <form action="/{{toolId}}/users/{{userId}}?_method=PATCH" method="POST">
+                            <input type="text" name="name" placeholder="Name" value="">
+                            <input type="text" name="department" placeholder="Department" value="">
+                            <input type="date" name="createdAt" placeholder="Check Out Date" value="Date.now()">
+                            <button class="btn" type="submit">Update</button>
+                        </form>
+                        <form action="/{{toolId}}/users/{{userId}}?_method=DELETE" method="POST">
+                            <button class="btn" type="submit">Delete</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
