@@ -5,12 +5,12 @@ const User = require("../models/User")
 const userController = {
     index: (req, res) => {
         const toolId = req.params.id
-        const userId = req.params.userId
 
         Tool.findById(toolId).populate('employTag')
             .then((toolUser) => {
                 const showToolUsers = toolUser.employTag
-                res.render('users/index', { showToolUsers, toolUser, toolId, userId })
+                console.log(toolId)
+                res.render('users/index', { showToolUsers: showToolUsers, toolId })
             })
     },
 
