@@ -10,7 +10,7 @@ body {
 
 li {
     margin: auto 50px;
-    font-size: 30px;
+    font-size: 30px !important;
 }
 
 .body {
