@@ -8,9 +8,11 @@
                     <p>{{createdAt}}</p>
                     <p>{{noteContent}}</p>
                 </div>
-                <form action="/{{toolId._id}}/notes/{{showNotes._id}}?_method=DELETE" method="POST">
-                    <button class="btn" type="submit">Delete</button>
-                </form>
+                <div class="actionBar">
+                    <form action="/{{../toolId}}/notes/{{this.id}}?_method=DELETE" method="POST">
+                        <button class="btn" type="submit">Delete</button>
+                    </form>
+                </div>
 
             </div>
         </div>

@@ -46,13 +46,13 @@ const userController = {
     edit: (req, res) => {
         const toolId = req.params.id
         const userId = req.params.userId
-        res.render('users/edit', { toolId, userId })
+        res.render('users/edit', { toolId: toolId, userId })
     },
 
     update: (req, res) => {
         const toolId = req.params.id
         const userId = req.params.userId
-        User.findByIdAndUpdate(toolId, userId, req.body, {
+        User.findByIdAndUpdate(userId, req.body, {
             new: true
         }).then((newUser) => {
             res.redirect(`/${newUserId}`)
